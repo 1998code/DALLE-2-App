@@ -6,7 +6,13 @@
 
 ## Getting Started
 1. Clone/Download this project
-2. Run the development server:
+2. Install:
+```
+npm
+# or
+yarn
+```
+3. Run the development server:
 ```bash
 npm run dev
 # or
