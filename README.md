@@ -25,6 +25,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Usage
+1. Input token start from `sess-`
+2. Query anything e.g. `cat on space`
+Sample:
+<img width="1024" alt="CleanShot 2022-06-18 at 16 36 25@2x" src="https://user-images.githubusercontent.com/54872601/174429869-97ce491e-6aa1-4887-a7e9-f9b99b5df38a.png">
+
 ## Deploy on Vercel
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
