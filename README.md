@@ -1,5 +1,9 @@
 # DALLE 2 App (NextJS)
 
+## Requirement
+- You need to be invited and can access https://labs.openai.com/
+- Get the Bearer Token via https://labs.openai.com/api/labs/tasks
+
 ## Getting Started
 1. Clone/Download this project
 2. Run the development server:
@@ -15,3 +19,6 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Deploy on Vercel
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Resources
+[dalle-node](https://github.com/ezzcodeezzlife/dalle-node)
