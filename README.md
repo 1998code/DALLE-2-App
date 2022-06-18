@@ -1,5 +1,7 @@
 # DALLE 2 App (NextJS)
 
+![CleanShot 2022-06-18 at 15 12 05@2x](https://user-images.githubusercontent.com/54872601/174429356-f9fc8ae5-6e4b-4dda-9262-165a5391445f.png)
+
 ## Requirement
 - You need to be invited and can access https://labs.openai.com/
 - Get the Bearer Token via https://labs.openai.com/api/labs/tasks
@@ -7,7 +9,7 @@
 ## Getting Started
 1. Clone/Download this project
 2. Install:
-```
+```bash
 npm
 # or
 yarn
