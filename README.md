@@ -1,2 +1,2 @@
-# DALLE-2-App
-DALLE 2 on nextJS
+# DALLE 2 App (NextJS)
+
