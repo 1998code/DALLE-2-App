@@ -56,7 +56,7 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Query"
           />
-          <button onClick={getDalle2}>Get 10 Images</button>
+          <button onClick={getDalle2}>Get 6 Images</button>
         </p>
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
