@@ -58,9 +58,9 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-darwin-arm64@12.1.6":
-  "integrity" "sha512-P0EXU12BMSdNj1F7vdkP/VrYDuCNwBExtRPDYawgSUakzi6qP0iKJpya2BuLvNzXx+XPU49GFuDC5X+SvY0mOw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.1.6.tgz"
+"@next/swc-win32-x64-msvc@12.1.6":
+  "integrity" "sha512-4ZEwiRuZEicXhXqmhw3+de8Z4EpOLQj/gp+D9fFWo6ii6W1kBkNNvvEx4A90ugppu+74pT1lIJnOuz3A9oQeJA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.6.tgz"
   "version" "12.1.6"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -362,10 +362,10 @@
     "shebang-command" "^2.0.0"
     "which" "^2.0.1"
 
-"dalle-node@^1.0.2":
-  "integrity" "sha512-CWqPaK7GrEt3XFRPvjgnWkK7Wh3M66QUalNeEkM0dvrsKwsPlEwRcJSnMjdYeTUR50fL59lIoatNvyqU7PoB5g=="
-  "resolved" "https://registry.npmjs.org/dalle-node/-/dalle-node-1.0.2.tgz"
-  "version" "1.0.2"
+"dalle-node@1.0.3":
+  "integrity" "sha512-wjDLWEMv7jUH13rL4qaTUGYdlibS0T2TLxg5GmDxQQcJ6zCwxLSJ78mbcv7HAOW0RlZEcJKi+1xA9x5HeNrGcg=="
+  "resolved" "https://registry.npmjs.org/dalle-node/-/dalle-node-1.0.3.tgz"
+  "version" "1.0.3"
   dependencies:
     "request" "^2.88.2"
 
