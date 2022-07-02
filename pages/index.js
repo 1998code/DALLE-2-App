@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import {useState} from 'react'
+
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
 
 export default function Home() {
   const [token, setToken] = useState('')
@@ -50,15 +51,12 @@ export default function Home() {
           />
           &
           <input
-            id="query"
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Query"
-          />
-          <button onClick={getDalle2}>Get 6 Images</button>
-        </p>
-        {loading && <p>Loading...</p>}
+  id = "query"
+  type = "text"
+  value = {query} onChange = {(e) => setQuery(e.target.value)} placeholder =
+      "Query" / >
+      <button onClick = {getDalle2}>Get 6 Images</button>
+        </p> {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
             return (
@@ -71,4 +69,4 @@ export default function Home() {
       </main>
     </div>
   )
-}
+      }
