@@ -11,6 +11,7 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   function getDalle2() {
+    setError(false);
     setLoading(true);
     fetch(`/api/dalle2?k=${token}&q=${query}`, {
       method: "POST",
