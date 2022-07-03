@@ -1,30 +1,31 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import Head from "next/head";
+import { useState } from "react";
+
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const [token, setToken] = useState('')
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [token, setToken] = useState("");
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   function getDalle2() {
-    setLoading(true)
+    setLoading(true);
     fetch(`/api/dalle2?k=${token}&q=${query}`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-      }
+        "Content-Type": "application/json",
+      },
     })
-    .then((res) => res.json())
-    .then((data) => {
-      setResults(data.result)
-      setLoading(false)
-    })
-    .catch((err) => {
-      console.log(err)
-      setLoading(false)
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        setResults(data.result);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }
 
   return (
@@ -34,9 +35,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Create a DALLE 2 App
-        </h1>
+        <h1 className={styles.title}>Create a DALLE 2 App</h1>
         <p className={styles.description}>
           Get started with
           <code className={styles.code}>/api/dalle2</code>
@@ -56,8 +55,8 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Query"
           />
-          <button onClick={getDalle2}>Get 10 Images</button>
-        </p>
+          <button onClick={getDalle2}>Get 6 Images</button>
+        </p>{" "}
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
@@ -65,10 +64,10 @@ export default function Home() {
               <div className={styles.card}>
                 <img width="100%" src={result.generation.image_path} />
               </div>
-            )
+            );
           })}
         </div>
       </main>
     </div>
-  )
+  );
 }
