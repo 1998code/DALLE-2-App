@@ -35,17 +35,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Create a DALLE 2 App</h1>
+        <h1 className={styles.title}>Create images with DALLE 2</h1>
         <p className={styles.description}>
-          Get started with
-          <code className={styles.code}>/api/dalle2</code>
-          ?
           <input
             id="token"
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="Token"
+            placeholder="Bearer Token"
           />
           &
           <input
@@ -57,6 +54,9 @@ export default function Home() {
           />
           <button onClick={getDalle2}>Get 6 Images</button>
         </p>{" "}
+
+        
+
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
