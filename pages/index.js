@@ -8,6 +8,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   function getDalle2() {
     setLoading(true);
@@ -25,6 +26,7 @@ export default function Home() {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        setError(true);
       });
   }
 
@@ -55,7 +57,7 @@ export default function Home() {
           <button onClick={getDalle2}>Get 6 Images</button>
         </p>{" "}
 
-        
+        {error? (<div className={styles.error}>Something went wrong.. Try again</div>) : (<></>)}
 
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>

@@ -114,3 +114,11 @@
     flex-direction: column;
   }
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+  padding: 2rem;
+  background-color: #fad0e0;
+  border-radius: 5px;
+}
