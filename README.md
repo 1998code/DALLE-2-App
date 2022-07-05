@@ -7,6 +7,9 @@
 - You need to be invited and can access https://labs.openai.com/
 - Get the Bearer Token via https://labs.openai.com/api/labs/tasks
 
+## Tutorial
+- Medium (https://bit.ly/3ul3pyf)
+
 ## Getting Started
 1. Clone/Download this project
 2. Install:
