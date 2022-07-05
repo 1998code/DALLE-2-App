@@ -8,8 +8,10 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   function getDalle2() {
+    setError(false);
     setLoading(true);
     fetch(`/api/dalle2?k=${token}&q=${query}`, {
       method: "POST",
@@ -25,6 +27,7 @@ export default function Home() {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        setError(true);
       });
   }
 
@@ -35,17 +38,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Create a DALLE 2 App</h1>
+        <h1 className={styles.title}>Create images with DALLE 2</h1>
         <p className={styles.description}>
-          Get started with
-          <code className={styles.code}>/api/dalle2</code>
-          ?
           <input
             id="token"
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="Token"
+            placeholder="Bearer Token"
           />
           &
           <input
@@ -57,6 +57,11 @@ export default function Home() {
           />
           <button onClick={getDalle2}>Get 6 Images</button>
         </p>{" "}
+        {error ? (
+          <div className={styles.error}>Something went wrong..Try again</div>
+        ) : (
+          <></>
+        )}
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
