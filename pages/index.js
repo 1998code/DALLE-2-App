@@ -38,7 +38,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Create images with DALLE 2</h1>
+        <h1 className={styles.title}>Create images with <span className={styles.titleColor}>DALLE 2</span></h1>
         <p className={styles.description}>
           <input
             id="token"
@@ -67,7 +67,7 @@ export default function Home() {
           {results.map((result) => {
             return (
               <div className={styles.card}>
-                <img width="100%" src={result.generation.image_path} />
+                <img className={styles.imgPreview} src={result.generation.image_path} />
               </div>
             );
           })}

@@ -33,3 +33,9 @@ button{
   margin-bottom: 10px;
   border-radius: 6px;
 }
+
+button:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+  color: white;
+}

@@ -28,6 +28,10 @@
   flex-grow: 1;
 }
 
+.titleColor {
+  color: cadetblue;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -75,21 +79,25 @@
 
 .card {
   margin: 1rem;
-  padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.imgPreview {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.imgPreview:hover,
+.imgPreview:focus,
+.imgPreview:active {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition-duration: 1s;
 }
 
 .card h2 {
