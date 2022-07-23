@@ -55,7 +55,7 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Query"
           />
-          <button onClick={getDalle2}>Get 6 Images</button>
+          <button onClick={getDalle2}>Get 4 Images</button>
         </p>{" "}
         {error ? (
           <div className={styles.error}>Something went wrong..Try again</div>
