@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import {useState} from "react";
 
 import styles from "../styles/Home.module.css";
 
@@ -14,21 +14,21 @@ export default function Home() {
     setError(false);
     setLoading(true);
     fetch(`/api/dalle2?k=${token}&q=${query}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json",
       },
     })
-      .then((res) => res.json())
-      .then((data) => {
-        setResults(data.result);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-        setError(true);
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          setResults(data.result);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+          setError(true);
+        });
   }
 
   return (
@@ -41,28 +41,20 @@ export default function Home() {
         <h1 className={styles.title}>Create images with <span className={styles.titleColor}>DALLE 2</span></h1>
         <p className={styles.description}>
           <input
-            id="token"
-            type="text"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Bearer Token"
-          />
-          &
-          <input
-            id="query"
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Query"
-          />
-          <button onClick={getDalle2}>Get 4 Images</button>
-        </p>{" "}
-        {error ? (
-          <div className={styles.error}>Something went wrong..Try again</div>
+  id = "token"
+  type = "text"
+  value = {token} onChange = {(e) => setToken(e.target.value)} placeholder =
+      "Bearer Token" / > & < input
+  id = "query"
+  type = "text"
+  value = {query} onChange = {(e) => setQuery(e.target.value)} placeholder =
+      "Query" / >
+      <button onClick = {getDalle2}>Get 4 Images</button>
+        </p>{
+          " "} {error ? (<div className = {styles.error}>Something went wrong.
+                             .Try again</div>
         ) : (
-          <></>
-        )}
-        {loading && <p>Loading...</p>}
+          <></>) } {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
             return (
@@ -75,4 +67,4 @@ export default function Home() {
       </main>
     </div>
   );
-}
+      }
