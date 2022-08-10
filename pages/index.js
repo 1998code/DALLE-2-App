@@ -11,24 +11,28 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   function getDalle2() {
-    setError(false);
-    setLoading(true);
-    fetch(`/api/dalle2?k=${token}&q=${query}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setResults(data.result);
-        setLoading(false);
+    if (token != "" && query != "") {
+      setError(false);
+      setLoading(true);
+      fetch(`/api/dalle2?k=${token}&q=${query}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-        setError(true);
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          setResults(data.result);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+          setError(true);
+        });
+    } else {
+      setError(true);
+    }
   }
 
   return (
@@ -60,7 +64,7 @@ export default function Home() {
           <button onClick={getDalle2}>Get 4 Images</button>
         </p>{" "}
         {error ? (
-          <div className={styles.error}>Something went wrong. .Try again</div>
+          <div className={styles.error}>Something went wrong. Try again.</div>
         ) : (
           <></>
         )}{" "}
