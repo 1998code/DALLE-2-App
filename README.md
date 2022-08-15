@@ -9,6 +9,8 @@
 - You need to be invited and can access https://labs.openai.com/
 - Get the Bearer Token via https://labs.openai.com/api/labs/tasks
 
+*If you have any questions, please read <a href="https://github.com/1998code/DALLE-2-App/issues/13">#13</a> first before raise a new issue.*
+
 ## Tutorial
 - Medium (https://bit.ly/3ul3pyf)
 
