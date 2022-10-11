@@ -18,7 +18,7 @@
 1. Clone/Download this project
 2. Install:
 ```bash
-npm
+npm install
 # or
 yarn
 ```
