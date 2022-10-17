@@ -33,17 +33,16 @@ export default function Home() {
 
   function download(url) {
     axios
-      .get(url, {
-        responseType: "arraybuffer",
-      })
-      .then((response) => {
-        const base64 = Buffer.from(response.data, "binary").toString("base64");
+      .post(`/api/download`, { url: url })
+      .then((res) => {
         const link = document.createElement("a");
-        link.href = `data:application/octet-stream;base64,${base64}`;
+        link.href = `data:application/octet-stream;base64,${res.data.result}`;
         link.download = `${query}.webp`;
         link.click();
-      }
-    );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (
