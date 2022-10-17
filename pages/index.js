@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import styles from "../styles/Home.module.css";
 
+import axios from "axios";
+
 export default function Home() {
   const [token, setToken] = useState("");
   const [query, setQuery] = useState("");
@@ -14,25 +16,34 @@ export default function Home() {
     if (token != "" && query != "") {
       setError(false);
       setLoading(true);
-      fetch(`/api/dalle2?k=${token}&q=${query}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setResults(data.result);
+      axios
+        .post(`/api/dalle2?k=${token}&q=${query}`)
+        .then((res) => {
+          setResults(res.data.result);
           setLoading(false);
         })
         .catch((err) => {
-          console.log(err);
           setLoading(false);
           setError(true);
         });
     } else {
       setError(true);
     }
+  }
+
+  function download(url) {
+    axios
+      .get(url, {
+        responseType: "arraybuffer",
+      })
+      .then((response) => {
+        const base64 = Buffer.from(response.data, "binary").toString("base64");
+        const link = document.createElement("a");
+        link.href = `data:application/octet-stream;base64,${base64}`;
+        link.download = `${query}.webp`;
+        link.click();
+      }
+    );
   }
 
   return (
@@ -76,6 +87,7 @@ export default function Home() {
                 <img
                   className={styles.imgPreview}
                   src={result.generation.image_path}
+                  onClick={() => download(result.generation.image_path)}
                 />
               </div>
             );
