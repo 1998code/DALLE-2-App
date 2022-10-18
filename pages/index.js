@@ -31,13 +31,15 @@ export default function Home() {
     }
   }
 
+  const [type, setType] = useState("webp");
+
   function download(url) {
     axios
-      .post(`/api/download`, { url: url })
+      .post(`/api/download`, { url: url, type: type })
       .then((res) => {
         const link = document.createElement("a");
-        link.href = `data:application/octet-stream;base64,${res.data.result}`;
-        link.download = `${query}.webp`;
+        link.href = res.data.result;
+        link.download = `${query}.${type.toLowerCase()}`;
         link.click();
       })
       .catch((err) => {
@@ -62,8 +64,7 @@ export default function Home() {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="Bearer Token"
-          />{" "}
-          &{" "}
+          />
           <input
             id="query"
             type="text"
@@ -71,13 +72,22 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Query"
           />
+          {"  "}
           <button onClick={getDalle2}>Get 4 Images</button>
-        </p>{" "}
-        {error ? (
-          <div className={styles.error}>Something went wrong. Try again.</div>
-        ) : (
-          <></>
-        )}{" "}
+          <br/>
+          <select
+            id="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+          >
+            <option value="webp">Webp</option>
+            <option value="png">Png</option>
+            <option value="jpg">Jpg</option>
+            <option value="gif">Gif</option>
+            <option value="avif">Avif</option>
+          </select>
+        </p>
+        {error ? ( <div className={styles.error}>Something went wrong. Try again.</div> ) : ( <></> )}
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
