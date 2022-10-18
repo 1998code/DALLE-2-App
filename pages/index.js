@@ -74,7 +74,9 @@ export default function Home() {
           />
           {"  "}
           <button onClick={getDalle2}>Get 4 Images</button>
-          <br/>
+        </p>
+        <small>
+          Download as:{" "}
           <select
             id="type"
             value={type}
@@ -86,7 +88,9 @@ export default function Home() {
             <option value="gif">Gif</option>
             <option value="avif">Avif</option>
           </select>
-        </p>
+          {" "}
+          Click the image below and save.
+        </small>
         {error ? ( <div className={styles.error}>Something went wrong. Try again.</div> ) : ( <></> )}
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
