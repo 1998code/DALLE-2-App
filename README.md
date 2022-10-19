@@ -41,5 +41,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## Deploy on Vercel
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Looking for iOS/iPadOS/macOS version?
+Swift/SwiftUI: https://github.com/1998code/DALLE2-Swift
+
 ## Resources
 [dalle-node](https://github.com/ezzcodeezzlife/dalle-node)
