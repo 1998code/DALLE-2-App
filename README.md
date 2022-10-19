@@ -44,5 +44,8 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 ## Looking for iOS/iPadOS/macOS version?
 Swift/SwiftUI: https://github.com/1998code/DALLE2-Swift
 
+## License
+MIT
+
 ## Resources
 [dalle-node](https://github.com/ezzcodeezzlife/dalle-node)
