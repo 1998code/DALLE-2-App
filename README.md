@@ -3,6 +3,8 @@
 
 [![DeepScan grade](https://deepscan.io/api/teams/18632/projects/21948/branches/641242/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18632&pid=21948&bid=641242)
 
+### IMPORTANT NOTICE: V1 will deprecate soon. V2 will apply OpenAI official API.
+
 ![CleanShot 2022-06-18 at 15 12 05@2x](https://user-images.githubusercontent.com/54872601/174429356-f9fc8ae5-6e4b-4dda-9262-165a5391445f.png)
 
 ## Requirement
