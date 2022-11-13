@@ -3,7 +3,7 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - nextJS12
+      - "*"
 jobs:
   get_data:
     runs-on: ubuntu-latest
