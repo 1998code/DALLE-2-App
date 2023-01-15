@@ -3,15 +3,12 @@
 
 [![DeepScan grade](https://deepscan.io/api/teams/18632/projects/21948/branches/641242/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18632&pid=21948&bid=641242)
 
-### IMPORTANT NOTICE: V1 will deprecate soon. V2 will apply OpenAI official API.
+### IMPORTANT NOTICE: V2 is using OpenAI official API. V1 is using OpenAI Labs Bearer Key.
 
-![CleanShot 2022-06-18 at 15 12 05@2x](https://user-images.githubusercontent.com/54872601/174429356-f9fc8ae5-6e4b-4dda-9262-165a5391445f.png)
+![Xnapper-2023-01-15-23 41 21](https://user-images.githubusercontent.com/54872601/212551185-c762e8b3-1d88-4c50-aeb2-caf7b302e9d2.jpg)
 
 ## Requirement
-- You need to be invited and can access https://labs.openai.com/
-- Get the Bearer Token via https://labs.openai.com/api/labs/tasks
-
-*If you have any questions, please read <a href="https://github.com/1998code/DALLE-2-App/issues/13">#13</a> first before raise a new issue.*
+- Get the API token via https://beta.openai.com/account/api-keys
 
 ## Tutorial
 - Medium (https://bit.ly/3ul3pyf)
@@ -36,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Usage
-1. Input token start from `sess-`
+1. Input token start from `sk-`
 2. Query anything, e.g. `cat on space`:
 <img width="1024" alt="CleanShot 2022-06-18 at 16 36 25@2x" src="https://user-images.githubusercontent.com/54872601/174429869-97ce491e-6aa1-4887-a7e9-f9b99b5df38a.png">
 
@@ -51,6 +48,3 @@ Swift/SwiftUI: https://github.com/1998code/DALLE2-Swift
 
 ## License
 MIT
-
-## Resources
-[dalle-node](https://github.com/ezzcodeezzlife/dalle-node)
