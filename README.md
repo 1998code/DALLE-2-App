@@ -3,8 +3,6 @@
 
 [![DeepScan grade](https://deepscan.io/api/teams/18632/projects/21948/branches/641242/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18632&pid=21948&bid=641242)
 
-### IMPORTANT NOTICE: V2 is using OpenAI official API. V1 is using OpenAI Labs Bearer Key.
-
 ![Xnapper-2023-01-15-23 41 21](https://user-images.githubusercontent.com/54872601/212551185-c762e8b3-1d88-4c50-aeb2-caf7b302e9d2.jpg)
 
 ## Requirement
@@ -45,6 +43,9 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
 ## Looking for iOS/iPadOS/macOS version?
 Swift/SwiftUI: https://github.com/1998code/DALLE2-Swift
+
+## Developer Notes
+- V2 is using OpenAI official API. V1 is using OpenAI Labs Bearer Key.
 
 ## License
 MIT
