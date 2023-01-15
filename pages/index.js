@@ -7,17 +7,18 @@ import axios from "axios";
 
 export default function Home() {
   const [token, setToken] = useState("");
-  const [query, setQuery] = useState("");
+  const [prompt, setPrompt] = useState("");
+  const [number, setNumber] = useState(9);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  function getDalle2() {
-    if (token != "" && query != "") {
+  function getImages() {
+    if (token != "" && prompt != "") {
       setError(false);
       setLoading(true);
       axios
-        .post(`/api/dalle2?k=${token}&q=${query}`)
+        .post(`/api/images?t=${token}&p=${prompt}&n=${number}`)
         .then((res) => {
           setResults(res.data.result);
           setLoading(false);
@@ -39,7 +40,7 @@ export default function Home() {
       .then((res) => {
         const link = document.createElement("a");
         link.href = res.data.result;
-        link.download = `${query}.${type.toLowerCase()}`;
+        link.download = `${prompt}.${type.toLowerCase()}`;
         link.click();
       })
       .catch((err) => {
@@ -66,14 +67,22 @@ export default function Home() {
             placeholder="Bearer Token"
           />
           <input
-            id="query"
+            id="prompt"
             type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Query"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            placeholder="Prompt"
+          />
+          <input
+            id="number"
+            type="number"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+            placeholder="Number of images"
+            max="10"
           />
           {"  "}
-          <button onClick={getDalle2}>Get 4 Images</button>
+          <button onClick={getImages}>Get {number} Images</button>
         </p>
         <small>
           Download as:{" "}
@@ -91,6 +100,7 @@ export default function Home() {
           {" "}
           Click the image below and save.
         </small>
+        <br />
         {error ? ( <div className={styles.error}>Something went wrong. Try again.</div> ) : ( <></> )}
         {loading && <p>Loading...</p>}
         <div className={styles.grid}>
@@ -99,8 +109,8 @@ export default function Home() {
               <div className={styles.card}>
                 <img
                   className={styles.imgPreview}
-                  src={result.generation.image_path}
-                  onClick={() => download(result.generation.image_path)}
+                  src={result.url}
+                  onClick={() => download(result.url)}
                 />
               </div>
             );
