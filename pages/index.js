@@ -64,7 +64,7 @@ export default function Home() {
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="Bearer Token"
+            placeholder="Bearer Token (sk-...)"
           />
           <input
             id="prompt"
