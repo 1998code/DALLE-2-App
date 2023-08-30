@@ -1,0 +1,8 @@
+version: '3'
+services:
+  images-generator-with-dalle-2:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
