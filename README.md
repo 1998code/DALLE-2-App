@@ -1,4 +1,4 @@
-# DALLE 2 App (Next.js)
+# DALL-E 2 App (Next.js)
 ### Create realistic images and art from a description in natural language.
 
 [![DeepScan grade](https://deepscan.io/api/teams/18632/projects/21948/branches/641242/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18632&pid=21948&bid=641242)
@@ -24,6 +24,11 @@ yarn
 npm run dev
 # or
 yarn dev
+```
+
+### If you prefer docker, run this command
+```
+docker-compose up --build -d
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
