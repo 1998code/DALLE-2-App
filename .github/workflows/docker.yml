@@ -20,5 +20,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dalle-2-app:$(date +%s)
+      run: |
+            docker build . --file Dockerfile --tag dalle-2-app:$(date +%s)
+            docker run dalle-2-app:$(date +%s)
+            docker push dalle-2-app:$(date +%s)
     
