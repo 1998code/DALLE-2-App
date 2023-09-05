@@ -21,6 +21,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: |
-            docker build . --file Dockerfile --tag ghcr.io/1998code/dalle-2-app:$(date +%s)
-            docker push ghcr.io/1998code/dalle-2-app:$(date +%s)
+            docker build . --file Dockerfile --tag ghcr.io/1998code/dalle-2-app:latest
+            docker push ghcr.io/1998code/dalle-2-app:latest
     
