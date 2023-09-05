@@ -2,6 +2,9 @@
 ### Create realistic images and art from a description in natural language.
 
 [![DeepScan grade](https://deepscan.io/api/teams/18632/projects/21948/branches/641242/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18632&pid=21948&bid=641242)
+[![Create diagram](https://github.com/1998code/DALLE-2-App/actions/workflows/diagram.yml/badge.svg?branch=v2)](https://github.com/1998code/DALLE-2-App/actions/workflows/diagram.yml)
+[![Docker Image CI](https://github.com/1998code/DALLE-2-App/actions/workflows/docker-image.yml/badge.svg?branch=v2)](https://github.com/1998code/DALLE-2-App/actions/workflows/docker-image.yml)
+[![Greetings](https://github.com/1998code/DALLE-2-App/actions/workflows/greetings.yml/badge.svg?branch=v2)](https://github.com/1998code/DALLE-2-App/actions/workflows/greetings.yml)
 
 ![Xnapper-2023-01-15-23 41 21](https://user-images.githubusercontent.com/54872601/212551185-c762e8b3-1d88-4c50-aeb2-caf7b302e9d2.jpg)
 
