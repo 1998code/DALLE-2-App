@@ -22,6 +22,5 @@ jobs:
     - name: Build the Docker image
       run: |
             docker build . --file Dockerfile --tag ghcr.io/1998code/dalle-2-app:$(date +%s)
-            docker run ghcr.io/1998code/dalle-2-app:$(date +%s)
             docker push ghcr.io/1998code/dalle-2-app:$(date +%s)
     
