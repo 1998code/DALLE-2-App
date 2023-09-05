@@ -7,7 +7,6 @@ on:
     branches: [ "v2" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
@@ -23,4 +22,3 @@ jobs:
       run: |
             docker build . --file Dockerfile --tag ghcr.io/1998code/dalle-2-app:latest
             docker push ghcr.io/1998code/dalle-2-app:latest
-    
